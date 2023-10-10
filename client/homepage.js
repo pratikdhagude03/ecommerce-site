@@ -2,9 +2,13 @@ const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
 
+
 document.addEventListener('DOMContentLoaded', function () {
-    const isLoggedIn = localStorage.getItem('isLoggedIn');W
-    if (isLoggedIn==0 || isLoggedIn==undefined) {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if(isLoggedIn == undefined){
+        window.location.href = 'login.html';
+    } 
+    if (isLoggedIn == 0 || isLoggedIn==undefined) {
         console.log("You are not logged in")
         window.location.href = 'login.html';
     }
